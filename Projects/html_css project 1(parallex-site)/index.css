@@ -94,6 +94,7 @@ section {
 }
 ::-webkit-scrollbar {
     width: 15px;
+    appearance: none;
   }
   
   /* Track */
