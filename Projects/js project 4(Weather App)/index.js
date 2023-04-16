@@ -46,6 +46,7 @@ function getFromSessionStorage(){
     if(!localCoordinates){
         //agar local coordintes nhi mile
         grandAccessContainer.classList.add("active");
+
     }
     else{
         const coordinates = JSON.parse(localCoordinates);  
@@ -85,5 +86,35 @@ function renderWeatherInfo(weatherInfo){
     const humidity = document.querySelector("[data-humidity]");
     const cloudiness = document.querySelector("[data-cloudiness]");
 
+    //fetch values from weatherinfo object and put it ui elements
+
+    cityName.innerText = weatherInfo?.name;
+    countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
+    description.innerText = weatherInfo?.weather?.[0]?.description;
+    weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
+    temperature.innerText = weatherInfo?.main?.temp;
+    windSpeed.innerText = weatherInfo?.wind?.speed;
+    humidity.innerText = weatherInfo?.main?.humidity;
+    cloudiness.innerText = weatherInfo?.clouds?.all;
+}
+
+function getLocation(){
+    if(navigator.geolocation){
+        navigation.geolocation.getCurrentPosition(showPosition);
+    }
+    else{
+        //show an alert for no geolocation support available
+    }
+}
+
+function showPosition(position){
+    const userCoordinates = {
+        lat: position.coords.latitude,
+        lon: position.coords.longitude,
+    }
+    sessionStorage.setItem("user-coordinates",JSON.stringify(userCoordinates));
 
 }
+
+const grantAccessButton = document.querySelector("[data-grantAccess]");
+grantAccessButton.addEventListener("click",getLocation);
