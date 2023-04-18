@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family: sans-serif;
 }
 #wrapper{
     height:100vh;
@@ -19,7 +20,7 @@
 
 }
 .background{
-    transform:translateZ(-40px) scale(5.2);
+    transform:translateZ(-41px) scale(5.2);
 }
 .foreground{
     transform:translateZ(-20px) scale(3);
