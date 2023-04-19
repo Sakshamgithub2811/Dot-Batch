@@ -63,16 +63,16 @@ h1{
 }
 
 .sub-container{
+    width:90%;
+    margin:0 auto;
+    max-width: 1000px;
+    
     display:flex;
     flex-direction:column;
     align-items:center;
 
 }
-.form-container.active{
-    scale:1;
-    opacity:1;
-    display:flex;
-}
+
 .grant-location-container{
     display: none;
 }
@@ -101,9 +101,9 @@ h1{
     text-transform: uppercase;
 }
 
-/* .user-info-container{
+.user-info-container{
     display:none;
-} */
+}
 .user-info-container.active{
     display:flex;
 }
@@ -133,24 +133,45 @@ h1{
     font-size:2.75rem;
     font-weight:700;
 }
-.parameter-container{
+/* .parameter-container{
     display:flex;
     gap:10px 20px;
     justify-content:center;
     margin-top:2rem;
+} */
+.parameter-container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
 }
 .parameter{
-    width:50%;
-    
-    background-color:  rgba(219,226,239,0.5) ;
-    border-radius:5px;
-    padding:1rem;
-    gap:5px 0;
+    width:40%;
+    max-width:200px;
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 5px;
+    padding:2rem;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    gap:5px 0;
     align-items: center;
 }
+/* .parameter{
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px 0;
+} */
 .parameter img{
     width:50px;
     height: 50px;
@@ -164,5 +185,43 @@ h1{
     font-size:1rem;
     font-weight:200;
 }
+.form-container.active{
+    
+    display:flex;
+    width:90%;
+    max-width: 550px;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    gap:0 10px;
+    margin-bottom:3rem;
+}
+.form-container{
+   display:none;
+}
+.form-container input{
+    all:unset;
+    width:calc(100% - 80px);
+    height:40px;
+    padding:0 20px;
+    background-color: rgba(219,226,239,0.5);
+    border-radius:10px;
+}
+.form-container input::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+.form-container input:focus{
+    outline: 3px solid rgba(255,255,255,0.7);
+}
+.form-container .btn{
+    padding:unset;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
