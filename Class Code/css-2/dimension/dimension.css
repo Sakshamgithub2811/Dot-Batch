@@ -1,0 +1,17 @@
+.max{
+    max-height: 100px;
+    border:1px solid black; 
+    overflow:scroll; 
+}
+.min{
+    margin-top: 10px;
+    min-height:100px;
+    border:1px solid black;
+    
+}
+.content{
+    margin-top: 20px;;
+    height:30px;
+    border:1px solid black;
+    overflow:scroll;
+}

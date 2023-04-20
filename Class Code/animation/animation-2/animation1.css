@@ -1,0 +1,19 @@
+.container{
+    height:500px;
+    width:500px;
+    background-color: orange;
+    border:2px solid red;
+    display:flex;
+
+}
+.box{
+    height:150px ;
+    width:150px;
+    margin:15px;
+    border:2px solid green;
+    background-color: aqua;
+    transition: s;
+}
+.box:hover{
+    background-color: black;
+}
