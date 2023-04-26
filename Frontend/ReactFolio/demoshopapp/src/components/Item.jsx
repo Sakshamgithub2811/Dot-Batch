@@ -1,8 +1,14 @@
 import './Item.css'
 
-function Item(){
+function Item(props){
+    const itemName = props.name;
 return (
- <p className="Nirma">Nirma</p>
+    <div>
+        <p className="Nirma">{itemName}</p>
+        {props.children}
+        {/* content ke ander kch text show karne ke liye props.childer use karege */}
+    </div>
+ 
 );
 }
 
