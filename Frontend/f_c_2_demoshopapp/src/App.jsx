@@ -1,5 +1,6 @@
 import Products from './components/Products';
 import './App.css';
+import NewProduct from './components/NewProduct';
 
 function App() {
   const products =[
@@ -28,7 +29,8 @@ function App() {
     },
   ];
   return (
-    <div >
+    <div>
+      <NewProduct/>
       <Products items={products}/>
     </div>
   );
