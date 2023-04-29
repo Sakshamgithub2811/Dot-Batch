@@ -1,8 +1,5 @@
-
-import './App.css';
-import NewProduct from './components/NewProduct';
 import Products from './components/Products';
-
+import './App.css';
 
 function App() {
   const products =[
@@ -30,15 +27,9 @@ function App() {
       date: new Date(2021, 5, 5),
     },
   ];
-  function PrintProductData(data){
-    console.log("i am inside app.js")
-    console.log(data);
-  }
-
   return (
-    <div>
-    <NewProduct pranay={PrintProductData}/>
-     <Products items={products}/> 
+    <div >
+      <Products items={products}/>
     </div>
   );
 }
