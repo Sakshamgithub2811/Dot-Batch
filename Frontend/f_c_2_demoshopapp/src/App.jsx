@@ -1,10 +1,11 @@
-import React from 'react';
 
-
+import './App.css';
+import NewProduct from './components/NewProduct';
 import Products from './components/Products';
 
-const App = () => {
-  const products = [
+
+function App() {
+  const products =[
     {
       id: 'p1',
       title: 'Nirma',
@@ -29,10 +30,15 @@ const App = () => {
       date: new Date(2021, 5, 5),
     },
   ];
+  function PrintProductData(data){
+    console.log("i am inside app.js")
+    console.log(data);
+  }
 
   return (
     <div>
-      <Products items={products} />
+    <NewProduct pranay={PrintProductData}/>
+     <Products items={products}/> 
     </div>
   );
 }
