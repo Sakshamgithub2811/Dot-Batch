@@ -28,9 +28,14 @@ function App() {
       date: new Date(2021, 5, 5),
     },
   ];
+
+  function printProductData(data){
+    console.log("inside app.js");
+    console.log(data);
+  }
   return (
-    <div>
-      <NewProduct/>
+    <div> 
+      <NewProduct Pranay = {printProductData}/>
       <Products items={products}/>
     </div>
   );

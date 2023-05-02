@@ -5,7 +5,7 @@ import ProductItem from './ProductItem';
 import './Products.css';
 
 const Products = (props) => {
-    console.log(props);
+    // console.log(props);
   return (
     <Card className="products">
       {/* Final class is card products, in this component */}

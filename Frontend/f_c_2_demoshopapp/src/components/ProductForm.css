@@ -6,13 +6,13 @@
     text-align: left;
   }
   
-  .new-product_control label {
+  .new-product_control_label {
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
   }
   
-  .new-product_control input {
+  .new-product_control_input {
     font: inherit;
     padding: 0.5rem;
     border-radius: 6px;

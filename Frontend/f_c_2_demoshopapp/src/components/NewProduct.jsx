@@ -4,10 +4,18 @@ import ProductForm from './ProductForm';
 import './NewProduct.css';
 
 
-const NewProduct = () => {
+const NewProduct = (props) => {
+
+  function saveProduct(product){
+    console.log("i am inside new product");
+    console.log(product);
+
+    // calling parent fun
+    props.Pranay(product)
+  }
   return (
     <div className='new-product'>
-     <ProductForm/>
+     <ProductForm onSaveProduct={saveProduct}/>
     </div>
   )
 }
