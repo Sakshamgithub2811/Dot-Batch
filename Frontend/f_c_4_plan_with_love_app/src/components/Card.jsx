@@ -1,7 +1,16 @@
 import React, { useState } from 'react'
 
-function Card ({id,image,info,price,name,removeTour} ){
-   
+// function Card ({id,image,info,price,name,removeTour} ){
+  // 
+
+function Card (props){
+ 
+   const id = props.id;
+   const image = props.image;
+   const info = props.info;  
+   const price = props.price;
+   const name = props.name;
+   const removeTour = props.removeTour;
   const [readmore,setReadmore]=useState(false);  
 
  

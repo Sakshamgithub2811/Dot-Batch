@@ -1,31 +1,32 @@
 const express = require("express");
 const app = express();
 
+// //server starts
 // app.listen(3000,()=>{
-//     console.log("app is running succesfully");
+//     console.log("app succesfully runs");
 // })
 
+// //default route
 // app.get("/",(req,res)=>{
-//     res.send("this is HomePage baby ");
-    
+//     res.send("this is my home page ");
 // })
-
 require("dotenv").config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000 
 
 //middleware
 app.use(express.json());
 
 const blog = require("./routes/blog");
-
-//mount 
+//mount
 app.use("/api/v1",blog);
-//start the server
-app.listen(PORT,()=>{
-    console.log(`app is started at Port no ${PORT}`);
-    
-})
 
 const connectWithDb = require("./config/database");
 connectWithDb();
 
+app.listen(PORT,()=>{
+    console.log(`App is started at port no ${PORT}`);
+})
+
+app.get("/",(req,res)=>{
+    res.send("<h1>thi is my homepage</h1>")
+})
