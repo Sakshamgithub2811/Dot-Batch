@@ -23,8 +23,6 @@ exports.createComment = async(req,res)=>{
        //poulate nhi karege to id's ayege or populate karege to actual comment ayege.
 
        //$push is a operator to update 
-       
-
        res.json({
         post:updatedPost,
        });
