@@ -1,34 +1,14 @@
-import React, { useState } from "react";
-
-import Tours from "./components/Tours";
+import React from "react";
 import data from './data';
 
-
 const App = () => {
-  
-  const[tours,setTours] = useState(data);
-     
-  function removeTour(id){
-    const newTours = tours.filter(tour=>tour.id!==id);
-    setTours(newTours);
-  }
-
-  if(tours.length === 0)
-  {
-    return (
-      <div className='refresh'>
-        <h2> No Tours Left</h2>
-        <button className="btn-white" onClick={()=>setTours(data)}>
-          Refresh
-        </button>
-      </div>
-    )
-  }
+  const {tours,setTours} = usestate(data);
 
   return (
-    <div>
-      <Tours tours={tours} removeTour={removeTour}></Tours>
-    </div>
+   <div>
+    <h2>Plan With Love</h2>
+    <Tours></Tours>
+   </div>
   );
 };
 
